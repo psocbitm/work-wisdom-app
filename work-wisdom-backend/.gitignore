@@ -1,0 +1,35 @@
+# Directories
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+logs/
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# macOS files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Testing frameworks
+coverage/
+
+# Build tools
+.nyc_output/
+out/
+tmp/
