@@ -12,7 +12,7 @@ const initialState = {
 
 export const login = createAsyncThunk("auth/login", async (data, thunkAPI) => {
   try {
-    const response = await axios.post("http://localhost:8000/api/login", data);
+    const response = await axios.post("https://work-wisdom-backend.onrender.com/api/login", data);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -24,7 +24,7 @@ export const signUp = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/signup",
+        "https://work-wisdom-backend.onrender.com/api/signup",
         data
       );
       return response.data;
@@ -38,7 +38,7 @@ export const getUser = createAsyncThunk(
   "auth/getUser",
   async (data, thunkAPI) => {
     try {
-      const response = await axios.get("http://localhost:8000/api/getUser", {
+      const response = await axios.get("https://work-wisdom-backend.onrender.com/api/getUser", {
         headers: {
           Authorization: `Bearer ${thunkAPI.getState().auth.token}`,
         },

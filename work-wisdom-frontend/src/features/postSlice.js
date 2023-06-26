@@ -14,7 +14,7 @@ const initialState = {
 
 export const getAllposts = createAsyncThunk("posts/getAllposts", async () => {
   try {
-    const response = await axios.get("http://localhost:8000/api/getAllPosts");
+    const response = await axios.get("https://work-wisdom-backend.onrender.com/api/getAllPosts");
     console.log(response.data);
     return response.data;
   } catch (error) {
@@ -27,7 +27,7 @@ export const createPost = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/createPost",
+        "https://work-wisdom-backend.onrender.com/api/createPost",
         data,
         {
           headers: {
