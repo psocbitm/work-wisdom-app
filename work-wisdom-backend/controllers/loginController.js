@@ -9,6 +9,7 @@ const loginController = async (req, res, next) => {
       if (!email || !password) {
         return res.status(400).json({ error: "Missing required fields" });
       }
+      
   
       // Find the user by email
       const user = await User.findOne({ email });
